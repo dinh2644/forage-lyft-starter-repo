@@ -1,4 +1,4 @@
-from serviceable import Serviceable, abstractmethod
+from serviceable import Serviceable
 
 
 class Car(Serviceable):
@@ -6,6 +6,5 @@ class Car(Serviceable):
         self.engine = engine
         self.battery = battery
 
-    @abstractmethod
     def needs_service(self):
-        pass
+        return self.engine.needs_service() or self.battery.needs_service()
