@@ -4,7 +4,7 @@ from engine.willoughby_engine import WilloughbyEngine
 class TestWilloughbyEngine(unittest.TestCase):
     def test_engine_should_be_serviced(self):
         current_mileage = 200000
-        last_service_mileage = 150000
+        last_service_mileage = 130000
         result = WilloughbyEngine(current_mileage, last_service_mileage)
 
         self.assertTrue(result.needs_service())
@@ -15,3 +15,7 @@ class TestWilloughbyEngine(unittest.TestCase):
         result = WilloughbyEngine(current_mileage, last_service_mileage)
 
         self.assertFalse(result.needs_service())
+
+
+if __name__ == '__main__':
+    unittest.main()

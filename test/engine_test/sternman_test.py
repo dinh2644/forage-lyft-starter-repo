@@ -13,3 +13,6 @@ class TestSternmanEngine(unittest.TestCase):
         result = SternmanEngine(warning_light_is_on)
 
         self.assertFalse(result.needs_service())
+
+if __name__ == '__main__':
+    unittest.main()
